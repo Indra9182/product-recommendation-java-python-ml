@@ -1,0 +1,15 @@
+services:
+  ml-service:
+    build: ./python-ml-service
+    container_name: ml-service
+    ports:
+      - "5001:5001"
+  java-api:
+    build: ./java-api
+    container_name: java-api
+    environment:
+      - ML_SERVICE_URL=http://ml-service:5001
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ml-service
