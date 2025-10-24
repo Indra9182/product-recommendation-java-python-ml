@@ -1,10 +1,9 @@
-version: "1"
 services:
-  - type: web
+  - type: web_service
     name: product-recommendation
     env: docker
     plan: free
-    dockerComposeFilePath: docker-compose.yml
+    dockerComposeFilePath: ./docker-compose.yml
     dockerComposeService: java-api
-    autoDeploy: true
     region: oregon
+    autoDeploy: true
