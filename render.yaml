@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: product-recommendation
+    env: docker
+    plan: free
+    dockerComposeFilePath: ./docker-compose.yml
+    dockerComposeService: java-api
+    region: oregon
