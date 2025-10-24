@@ -1,5 +1,6 @@
+version: "1"
 services:
-  - type: web_service
+  - type: web
     name: product-recommendation
     env: docker
     plan: free
